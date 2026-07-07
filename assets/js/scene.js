@@ -24,20 +24,21 @@
     renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
 
     var scene = new THREE.Scene();
-    scene.fog = new THREE.FogExp2(0x0b0b0d, 0.045);
+    // light "golden hour" scene: warm ivory fog so depth fades into the page
+    scene.fog = new THREE.FogExp2(0xf7f4ec, 0.05);
 
     var camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
     camera.position.set(0, 0, 11);
 
     /* ── lights ── */
-    scene.add(new THREE.AmbientLight(0x404048, 0.7));
-    var keyLight = new THREE.PointLight(0xffb700, 1.6, 40);
+    scene.add(new THREE.AmbientLight(0xfff4e0, 1.15));
+    var keyLight = new THREE.PointLight(0xffab00, 1.8, 40);
     keyLight.position.set(5, 4, 6);
     scene.add(keyLight);
-    var rimLight = new THREE.DirectionalLight(0x8899ff, 0.7);
+    var rimLight = new THREE.DirectionalLight(0xffffff, 0.9);
     rimLight.position.set(-6, 3, -4);
     scene.add(rimLight);
-    var roam = new THREE.PointLight(0xff8a00, 0.9, 25);
+    var roam = new THREE.PointLight(0xff7a00, 1.1, 25);
     roam.position.set(-4, -2, 4);
     scene.add(roam);
 
@@ -126,9 +127,11 @@
     }
     var pGeo = new THREE.BufferGeometry();
     pGeo.setAttribute("position", new THREE.BufferAttribute(positions, 3));
+    // additive blending disappears on a light page — use normal blending
+    // with a deep amber so the dust reads as warm specks
     var pMat = new THREE.PointsMaterial({
-      color: 0xffb700, size: 0.045, transparent: true, opacity: 0.6,
-      blending: THREE.AdditiveBlending, depthWrite: false
+      color: 0xff8a00, size: 0.055, transparent: true, opacity: 0.5,
+      depthWrite: false
     });
     scene.add(new THREE.Points(pGeo, pMat));
 
@@ -198,7 +201,7 @@
 
       // key fades back as you scroll past hero
       key.position.z = keyBaseZ - scrollP * 6;
-      pMat.opacity = 0.6 * (1 - scrollP * 0.8);
+      pMat.opacity = 0.5 * (1 - scrollP * 0.8);
 
       renderer.render(scene, camera);
     }
