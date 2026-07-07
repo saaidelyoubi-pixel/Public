@@ -3,752 +3,575 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Youbi Key Solutions – Autoschlüssel & Notdienst München | 24/7 Mobiler Service</title>
-  <meta name="description" content="Mobiler Autoschlüssel-Service & Auto-Notdienst in München. Schlüssel verloren, Auto verschlossen, Batterie leer? Schnell vor Ort, transparente Preise. Jetzt anrufen!">
-  <meta name="keywords" content="Autoschlüssel München, Autoschlüssel nachmachen München, Autoöffnung München, Fahrzeugöffnung München, Batterie-Service München, Auto startet nicht München, Autoschlüssel verloren München, Mobiler Autoschlüssel-Service München, Auto Notdienst München">
+  <title>YOUBIKEYCAR — Autoschlüssel & Auto-Notdienst München | 24/7 vor Ort</title>
+  <meta name="description" content="Ausgesperrt? Schlüssel verloren? Batterie leer? YOUBIKEYCAR ist Ihr mobiler Autoschlüssel- & Auto-Notdienst in München. In ø 30 Minuten vor Ort — 24/7, schadensfrei, transparent.">
+  <meta name="keywords" content="Autoschlüssel München, Autoöffnung München, Autoschlüssel nachmachen, Fahrzeugöffnung, Batterie-Service München, Auto Notdienst München, Autoschlüssel verloren">
   <meta name="robots" content="index, follow">
-  <meta property="og:title" content="Youbi Key Solutions – Mobiler Autoschlüssel-Service München">
-  <meta property="og:description" content="24/7 mobiler Autoschlüssel- und Auto-Notdienst in München. Schnelle Hilfe bei verschlossenem Auto, verlorenem Schlüssel oder leerer Batterie.">
-  <meta property="og:url" content="https://www.youbikeyservice.de/">
+  <meta property="og:title" content="YOUBIKEYCAR — 24/7 Autoschlüssel- & Auto-Notdienst München">
+  <meta property="og:description" content="Ausgesperrt? Wir kommen. Mobiler Autoschlüssel-Service, Autoöffnung, Batterie-Service & Diagnose — in ø 30 Minuten bei Ihnen in München.">
+  <meta property="og:url" content="https://saaidelyoubi-pixel.github.io/Public/">
   <meta property="og:type" content="website">
-  <link rel="canonical" href="https://www.youbikeyservice.de/">
+  <link rel="canonical" href="https://saaidelyoubi-pixel.github.io/Public/">
   <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-
-  <!-- GSAP CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/TextPlugin.min.js"></script>
-
-  <!-- Three.js -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
+  <link rel="preload" href="assets/fonts/archivo-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/archivo-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/style.css">
 
-  <!-- Structured Data -->
+  <script src="assets/vendor/gsap.min.js" defer></script>
+  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
+  <script src="assets/vendor/lenis.min.js" defer></script>
+  <script src="assets/vendor/three.min.js" defer></script>
+  <script src="assets/js/scene.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "Youbi Key Solutions",
-    "description": "Mobiler Autoschlüssel-Service und Auto-Notdienst in München",
+    "name": "YOUBIKEYCAR",
+    "description": "Mobiler Autoschlüssel-Service und Auto-Notdienst in München — Autoöffnung, Ersatzschlüssel, Batterie-Service, Fahrzeugdiagnose",
+    "url": "https://saaidelyoubi-pixel.github.io/Public/",
     "address": {"@type": "PostalAddress", "addressLocality": "München", "addressRegion": "Bayern", "addressCountry": "DE"},
     "telephone": "+4915735989735",
     "openingHours": "Mo-Su 00:00-24:00",
-    "serviceArea": {"@type": "City", "name": "München"}
+    "priceRange": "€€",
+    "areaServed": {"@type": "City", "name": "München"}
   }
   </script>
 </head>
 <body>
 
-<!-- Floating CTA Bar (Mobile) -->
-<div class="floating-cta" id="floatingCTA">
-  <a href="tel:+4915735989735" class="float-btn float-call">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-    Anrufen
-  </a>
-  <a href="https://wa.me/4915735989735" class="float-btn float-whatsapp" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    WhatsApp
-  </a>
+<!-- ══════════ PRELOADER ══════════ -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader-inner">
+    <div class="preloader-word">
+      <span>Y</span><span>O</span><span>U</span><span>B</span><span>I</span><span class="pl-accent">K</span><span class="pl-accent">E</span><span class="pl-accent">Y</span><span>C</span><span>A</span><span>R</span>
+    </div>
+    <div class="preloader-bar"><span id="preloaderBar"></span></div>
+    <div class="preloader-meta">
+      <span class="mono">AUTO-NOTDIENST MÜNCHEN</span>
+      <span class="mono" id="preloaderPct">0%</span>
+    </div>
+  </div>
+  <div class="preloader-panel p1"></div>
+  <div class="preloader-panel p2"></div>
 </div>
 
-<!-- Navigation -->
-<nav class="navbar" id="navbar">
-  <div class="nav-container">
-    <a href="#home" class="nav-logo">
-      <div class="logo-icon">
-        <svg viewBox="0 0 40 40" fill="none">
-          <circle cx="20" cy="20" r="19" stroke="#F5C842" stroke-width="2"/>
-          <path d="M20 8a8 8 0 100 16 8 8 0 000-16zm0 13a5 5 0 110-10 5 5 0 010 10z" fill="#F5C842"/>
-          <rect x="24" y="19" width="10" height="3" rx="1.5" fill="#F5C842"/>
-          <rect x="30" y="22" width="3" height="3" rx="1" fill="#F5C842"/>
-          <rect x="27" y="22" width="3" height="5" rx="1" fill="#F5C842"/>
-        </svg>
-      </div>
-      <span>Youbi <strong>Key Solutions</strong></span>
+<!-- ══════════ CURSOR ══════════ -->
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+<div class="cursor-ring" id="cursorRing" aria-hidden="true"><span id="cursorLabel"></span></div>
+
+<!-- ══════════ NAV ══════════ -->
+<header class="nav" id="nav">
+  <a href="#top" class="nav-logo" data-cursor="hover" aria-label="YOUBIKEYCAR — nach oben">
+    <svg class="nav-logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+      <rect x="1.5" y="1.5" width="29" height="29" rx="8" stroke="currentColor" stroke-width="2"/>
+      <circle cx="12" cy="13" r="4.4" stroke="currentColor" stroke-width="2.2"/>
+      <path d="M15.4 16.4 L22.5 23.5 M22.5 23.5 v-3.4 M19.6 20.6 h3.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+    </svg>
+    <span>YOUBI<em>KEY</em>CAR</span>
+  </a>
+
+  <nav class="nav-links" aria-label="Hauptnavigation">
+    <a href="#leistungen" data-cursor="hover">Leistungen</a>
+    <a href="#preise" data-cursor="hover">Preise</a>
+    <a href="#gebiet" data-cursor="hover">Einsatzgebiet</a>
+    <a href="#faq" data-cursor="hover">FAQ</a>
+    <a href="#kontakt" data-cursor="hover">Kontakt</a>
+  </nav>
+
+  <div class="nav-right">
+    <div class="nav-clock mono" aria-hidden="true">
+      <span class="clock-dot"></span>
+      <span>MUC <span id="navClock">--:--</span></span>
+    </div>
+    <a href="tel:+4915735989735" class="btn btn-solid btn-nav" data-magnetic data-cursor="hover">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+      <span>0157 3598 9735</span>
     </a>
-
-    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
-      <span></span><span></span><span></span>
+    <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false" data-cursor="hover">
+      <span></span><span></span>
     </button>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#services">Leistungen</a></li>
-      <li><a href="#prices">Preise</a></li>
-      <li><a href="#area">Einsatzgebiet</a></li>
-      <li><a href="#about">Über uns</a></li>
-      <li><a href="#contact">Kontakt</a></li>
-      <li><a href="tel:+4915735989735" class="nav-cta">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-        Jetzt anrufen
-      </a></li>
-    </ul>
   </div>
-</nav>
+</header>
 
-<!-- Hero Section -->
-<section class="hero" id="home">
-  <canvas id="heroCanvas"></canvas>
-  <div class="hero-particles" id="particles"></div>
+<!-- ══════════ MOBILE MENU ══════════ -->
+<div class="menu-overlay" id="menuOverlay" aria-hidden="true">
+  <nav class="menu-links" aria-label="Mobilnavigation">
+    <a href="#leistungen"><span class="mono menu-num">01</span>Leistungen</a>
+    <a href="#preise"><span class="mono menu-num">02</span>Preise</a>
+    <a href="#gebiet"><span class="mono menu-num">03</span>Einsatzgebiet</a>
+    <a href="#faq"><span class="mono menu-num">04</span>FAQ</a>
+    <a href="#kontakt"><span class="mono menu-num">05</span>Kontakt</a>
+  </nav>
+  <div class="menu-footer">
+    <a href="tel:+4915735989735" class="btn btn-solid">Jetzt anrufen</a>
+    <a href="https://wa.me/4915735989735" target="_blank" rel="noopener" class="btn btn-ghost">WhatsApp</a>
+  </div>
+</div>
 
-  <div class="hero-content">
-    <div class="hero-badge" id="heroBadge">
-      <span class="badge-dot"></span>
-      24/7 Notdienst München
+<main id="top">
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="hero">
+  <canvas id="keyCanvas" aria-hidden="true"></canvas>
+  <div class="hero-grain" aria-hidden="true"></div>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow" data-hero-fade>
+      <span class="pulse-dot" aria-hidden="true"></span>
+      <span class="mono">24/7 NOTDIENST · MÜNCHEN &amp; UMLAND</span>
     </div>
 
-    <h1 class="hero-title" id="heroTitle">
-      <span class="line">Autoschlüssel verloren?</span>
-      <span class="line accent">Auto verschlossen?</span>
-      <span class="line">Batterie leer?</span>
+    <h1 class="hero-title">
+      <span class="hero-line"><span data-split>AUSGESPERRT?</span></span>
+      <span class="hero-line hero-line-outline"><span data-split>WIR KOMMEN.</span></span>
     </h1>
 
-    <p class="hero-subtitle" id="heroSubtitle">
-      Mobiler Autoschlüssel- &amp; Auto-Notdienst in München.<br>
-      <strong>Schnell vor Ort</strong>, professionelle Hilfe und transparente Preise.
+    <p class="hero-sub" data-hero-fade>
+      Mobiler Autoschlüssel- &amp; Auto&#8209;Notdienst in München.
+      Schlüssel verloren, Auto verschlossen, Batterie leer —
+      <em>in ø 30 Minuten sind wir bei Ihnen.</em>
     </p>
 
-    <div class="hero-buttons" id="heroButtons">
-      <a href="tel:+4915735989735" class="btn btn-primary btn-lg">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+    <div class="hero-cta" data-hero-fade>
+      <a href="tel:+4915735989735" class="btn btn-solid btn-lg" data-magnetic data-cursor="call">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
         Jetzt anrufen
       </a>
-      <a href="https://wa.me/4915735989735" class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      <a href="https://wa.me/4915735989735" target="_blank" rel="noopener" class="btn btn-ghost btn-lg" data-magnetic data-cursor="hover">
         WhatsApp schreiben
       </a>
-      <a href="#contact" class="btn btn-outline btn-lg">Angebot anfragen</a>
     </div>
 
-    <div class="hero-stats" id="heroStats">
-      <div class="stat">
-        <span class="stat-num" data-target="30">0</span><span>min</span>
-        <span class="stat-label">Reaktionszeit</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num" data-target="500">0</span><span>+</span>
-        <span class="stat-label">Einsätze</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-num" data-target="100">0</span><span>%</span>
-        <span class="stat-label">Zufriedenheit</span>
-      </div>
+    <div class="hero-stats" data-hero-fade>
+      <div class="hstat"><span class="hstat-num"><span data-count="30">0</span><small>min</small></span><span class="hstat-label mono">Ø REAKTIONSZEIT</span></div>
+      <div class="hstat"><span class="hstat-num"><span data-count="500">0</span><small>+</small></span><span class="hstat-label mono">EINSÄTZE</span></div>
+      <div class="hstat"><span class="hstat-num">24<small>/7</small></span><span class="hstat-label mono">ERREICHBAR</span></div>
     </div>
   </div>
 
-  <div class="hero-visual" id="heroVisual">
-    <div class="car-key-3d" id="carKey3D">
-      <svg class="key-svg" viewBox="0 0 300 200" fill="none">
-        <defs>
-          <linearGradient id="keyGrad" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#F5C842"/>
-            <stop offset="100%" stop-color="#E8A800"/>
-          </linearGradient>
-          <linearGradient id="fobGrad" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#1a2744"/>
-            <stop offset="100%" stop-color="#0d1a3a"/>
-          </linearGradient>
-          <filter id="glow">
-            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-            <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
-          </filter>
-        </defs>
-        <!-- Key fob body -->
-        <rect x="80" y="60" width="140" height="90" rx="18" fill="url(#fobGrad)" stroke="#F5C842" stroke-width="1.5"/>
-        <!-- Fob buttons -->
-        <rect x="100" y="80" width="30" height="18" rx="6" fill="#F5C842" opacity="0.9"/>
-        <rect x="140" y="80" width="30" height="18" rx="6" fill="#2a3f6f" stroke="#F5C842" stroke-width="1"/>
-        <rect x="170" y="80" width="20" height="18" rx="6" fill="#2a3f6f" stroke="#F5C842" stroke-width="1"/>
-        <rect x="100" y="108" width="90" height="12" rx="4" fill="#1e3060"/>
-        <!-- Youbi logo on fob -->
-        <text x="120" y="93" font-family="Poppins" font-size="8" fill="#0d1a3a" font-weight="700">LOCK</text>
-        <!-- Key blade -->
-        <path d="M220 98 L270 98 L270 106 L260 106 L258 110 L254 106 L250 110 L246 106 L242 110 L238 106 L220 106 Z" fill="url(#keyGrad)"/>
-        <!-- Key ring -->
-        <circle cx="88" cy="105" r="12" stroke="#F5C842" stroke-width="3" fill="none"/>
-        <!-- Signal waves -->
-        <path d="M155 50 Q165 42 175 50" stroke="#F5C842" stroke-width="2" fill="none" opacity="0.4" class="signal-wave"/>
-        <path d="M150 44 Q165 33 180 44" stroke="#F5C842" stroke-width="1.5" fill="none" opacity="0.25" class="signal-wave"/>
-        <path d="M145 38 Q165 24 185 38" stroke="#F5C842" stroke-width="1" fill="none" opacity="0.1" class="signal-wave"/>
-      </svg>
-    </div>
-
-    <div class="pulse-ring pulse-1"></div>
-    <div class="pulse-ring pulse-2"></div>
-    <div class="pulse-ring pulse-3"></div>
-
-    <div class="location-pin">
-      <svg viewBox="0 0 24 24" fill="#F5C842"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-      <span>München</span>
-    </div>
-  </div>
-
-  <div class="hero-scroll-hint">
-    <div class="scroll-line"></div>
-    <span>Scrollen</span>
+  <div class="hero-bottom" data-hero-fade>
+    <span class="mono">SCROLLEN</span>
+    <span class="scroll-line" aria-hidden="true"></span>
+    <span class="mono">SCHADENSFREI · TRANSPARENT · ZERTIFIZIERT</span>
   </div>
 </section>
 
-<!-- Trust Bar -->
-<section class="trust-bar">
-  <div class="container">
-    <div class="trust-items">
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="#F5C842"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/></svg>
-        <span>5-Sterne Bewertungen</span>
-      </div>
-      <div class="trust-divider"></div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#F5C842" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        <span>30 min. Reaktionszeit</span>
-      </div>
-      <div class="trust-divider"></div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#F5C842" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        <span>Schadensfreie Öffnung</span>
-      </div>
-      <div class="trust-divider"></div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#F5C842" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-        <span>Transparente Preise</span>
-      </div>
-      <div class="trust-divider"></div>
-      <div class="trust-item">
-        <svg viewBox="0 0 24 24" fill="none" stroke="#F5C842" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
-        <span>Modernste Ausrüstung</span>
-      </div>
+<!-- ══════════ MARQUEE ══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>AUTOÖFFNUNG <i>✳</i> SCHLÜSSEL VERLOREN <i>✳</i> BATTERIE LEER <i>✳</i> 24/7 NOTDIENST <i>✳</i> ALLE MARKEN <i>✳</i> </span><span>AUTOÖFFNUNG <i>✳</i> SCHLÜSSEL VERLOREN <i>✳</i> BATTERIE LEER <i>✳</i> 24/7 NOTDIENST <i>✳</i> ALLE MARKEN <i>✳</i> </span>
+  </div>
+</div>
+
+<!-- ══════════ STORY / EXPERIENCE ══════════ -->
+<section class="story" id="story">
+  <div class="story-pin" id="storyPin">
+    <div class="story-bg" aria-hidden="true"></div>
+    <div class="story-head">
+      <span class="mono section-tag">EINE NACHT IN MÜNCHEN</span>
+      <span class="mono story-progress-label">SZENE <span id="storyIndex">01</span> / 04</span>
+    </div>
+
+    <div class="story-stage">
+      <article class="story-scene is-active" data-scene="0">
+        <span class="story-time mono">23:47</span>
+        <h3 class="story-title">Die Tür fällt zu.</h3>
+        <p>Parkplatz in Schwabing. Der Motor läuft nicht mehr, der Schlüssel liegt noch drin. Es regnet. Genau dieser Moment.</p>
+      </article>
+      <article class="story-scene" data-scene="1">
+        <span class="story-time mono">23:49</span>
+        <h3 class="story-title">Ein Anruf genügt.</h3>
+        <p>Sie rufen an. Wir fragen nur: Wo stehen Sie? Welches Fahrzeug? Dann sitzt unser Techniker schon im Wagen.</p>
+      </article>
+      <article class="story-scene" data-scene="2">
+        <span class="story-time mono">00:14</span>
+        <h3 class="story-title">Wir sind da.</h3>
+        <p>Spezialwerkzeug statt Gewalt: Ihr Auto wird schadensfrei geöffnet. Kein Kratzer, keine Abschleppkosten, kein Werkstatttermin.</p>
+      </article>
+      <article class="story-scene" data-scene="3">
+        <span class="story-time mono">00:26</span>
+        <h3 class="story-title">Sie fahren weiter.</h3>
+        <p>Sie sitzen wieder am Steuer, der Preis war vorher klar. Als wäre nichts gewesen — nur eine Geschichte für morgen.</p>
+      </article>
+    </div>
+
+    <div class="story-track" aria-hidden="true">
+      <div class="story-track-fill" id="storyFill"></div>
+      <div class="story-ticks"><i></i><i></i><i></i><i></i></div>
     </div>
   </div>
 </section>
 
-<!-- Services Section -->
-<section class="services" id="services">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Unsere Leistungen</span>
-      <h2 class="section-title">Was wir für Sie tun</h2>
-      <p class="section-desc">Professionelle Lösung für alle Fahrzeugprobleme – direkt vor Ihrer Tür</p>
+<!-- ══════════ SERVICES ══════════ -->
+<section class="services" id="leistungen">
+  <div class="section-head" data-reveal>
+    <span class="mono section-tag">LEISTUNGEN</span>
+    <h2 class="section-title"><span data-split>Was wir für Sie tun</span></h2>
+    <p class="section-sub">Vier Probleme, eine Nummer. Wir kommen direkt zu Ihnen — Parkplatz, Zuhause, Autobahn.</p>
+  </div>
+
+  <div class="service-list" id="serviceList">
+    <article class="service-row" data-service="0" data-cursor="open">
+      <button class="service-head" aria-expanded="false">
+        <span class="service-num mono">01</span>
+        <h3 class="service-name">Autoöffnung</h3>
+        <span class="service-price mono">AB 79€</span>
+        <span class="service-toggle" aria-hidden="true"></span>
+      </button>
+      <div class="service-body">
+        <div class="service-body-inner">
+          <p>Schlüssel im Auto eingeschlossen? Wir öffnen Ihr Fahrzeug <strong>schadensfrei</strong> — mit professionellem Spezialwerkzeug, bei allen Marken, rund um die Uhr.</p>
+          <ul>
+            <li>Schadensfreie Fahrzeugöffnung</li>
+            <li>Alle Fahrzeugmarken &amp; Modelle</li>
+            <li>Notdienst — 24/7 vor Ort</li>
+          </ul>
+          <a href="tel:+4915735989735" class="btn btn-solid" data-cursor="call">Jetzt Hilfe anfordern</a>
+        </div>
+      </div>
+      <div class="service-visual" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none">
+          <rect x="30" y="70" width="140" height="100" rx="14" stroke="currentColor" stroke-width="3"/>
+          <path d="M65 70 V50 a35 35 0 0170 0 v20" stroke="currentColor" stroke-width="3" class="sv-shackle"/>
+          <circle cx="100" cy="115" r="14" fill="currentColor" opacity=".9"/>
+          <rect x="96" y="122" width="8" height="24" rx="4" fill="currentColor" opacity=".9"/>
+        </svg>
+      </div>
+    </article>
+
+    <article class="service-row" data-service="1" data-cursor="open">
+      <button class="service-head" aria-expanded="false">
+        <span class="service-num mono">02</span>
+        <h3 class="service-name">Ersatzschlüssel</h3>
+        <span class="service-price mono">AB 149€</span>
+        <span class="service-toggle" aria-hidden="true"></span>
+      </button>
+      <div class="service-body">
+        <div class="service-body-inner">
+          <p>Schlüssel verloren oder ein Zweitschlüssel gewünscht? Wir fertigen und <strong>programmieren direkt vor Ort</strong> — Transponder, Funk und Keyless inklusive.</p>
+          <ul>
+            <li>Anfertigung &amp; Programmierung vor Ort</li>
+            <li>Transponder, Funk &amp; Keyless</li>
+            <li>Gehäuse-Reparatur &amp; Zweitschlüssel</li>
+          </ul>
+          <a href="tel:+4915735989735" class="btn btn-solid" data-cursor="call">Schlüssel anfragen</a>
+        </div>
+      </div>
+      <div class="service-visual" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none">
+          <circle cx="70" cy="70" r="34" stroke="currentColor" stroke-width="3"/>
+          <circle cx="70" cy="70" r="14" stroke="currentColor" stroke-width="3" class="sv-spin"/>
+          <path d="M95 95 L160 160 M160 160 v-24 M140 140 h22" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </article>
+
+    <article class="service-row" data-service="2" data-cursor="open">
+      <button class="service-head" aria-expanded="false">
+        <span class="service-num mono">03</span>
+        <h3 class="service-name">Batterie-Service</h3>
+        <span class="service-price mono">AB 49€</span>
+        <span class="service-toggle" aria-hidden="true"></span>
+      </button>
+      <div class="service-body">
+        <div class="service-body-inner">
+          <p>Auto springt nicht an? Wir kommen mit <strong>Sofort-Starthilfe</strong>, testen Ihre Batterie professionell und wechseln sie bei Bedarf direkt vor Ort.</p>
+          <ul>
+            <li>Sofort-Starthilfe &amp; Diagnose</li>
+            <li>Professioneller Batterietest</li>
+            <li>Batteriewechsel vor Ort</li>
+          </ul>
+          <a href="tel:+4915735989735" class="btn btn-solid" data-cursor="call">Starthilfe rufen</a>
+        </div>
+      </div>
+      <div class="service-visual" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none">
+          <rect x="25" y="70" width="130" height="70" rx="10" stroke="currentColor" stroke-width="3"/>
+          <rect x="155" y="88" width="20" height="34" rx="6" stroke="currentColor" stroke-width="3"/>
+          <path d="M95 78 L75 108 h18 l-8 26 30 -38 h-18 l8 -18z" fill="currentColor" class="sv-bolt"/>
+        </svg>
+      </div>
+    </article>
+
+    <article class="service-row" data-service="3" data-cursor="open">
+      <button class="service-head" aria-expanded="false">
+        <span class="service-num mono">04</span>
+        <h3 class="service-name">Fahrzeugdiagnose</h3>
+        <span class="service-price mono">AB 59€</span>
+        <span class="service-toggle" aria-hidden="true"></span>
+      </button>
+      <div class="service-body">
+        <div class="service-body-inner">
+          <p>Warnleuchte an? Wir lesen Fehlercodes per <strong>OBD-Profigerät</strong> aus, prüfen Systeme und liefern ein klares Fehlerprotokoll — verständlich erklärt.</p>
+          <ul>
+            <li>OBD-Fehlerauslesen &amp; Systemchecks</li>
+            <li>Basis-Codierungen</li>
+            <li>Klares Fehlerprotokoll</li>
+          </ul>
+          <a href="tel:+4915735989735" class="btn btn-solid" data-cursor="call">Diagnose anfragen</a>
+        </div>
+      </div>
+      <div class="service-visual" aria-hidden="true">
+        <svg viewBox="0 0 200 200" fill="none">
+          <rect x="35" y="45" width="130" height="90" rx="10" stroke="currentColor" stroke-width="3"/>
+          <polyline points="55,100 75,100 85,72 100,120 112,90 125,100 145,100" stroke="currentColor" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round" class="sv-pulse"/>
+          <line x1="70" y1="155" x2="130" y2="155" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- ══════════ STEPS ══════════ -->
+<section class="steps">
+  <div class="section-head" data-reveal>
+    <span class="mono section-tag">SO EINFACH GEHT'S</span>
+    <h2 class="section-title"><span data-split>Drei Schritte. Fertig.</span></h2>
+  </div>
+  <div class="steps-grid">
+    <div class="step-card" data-reveal>
+      <span class="step-num mono">01</span>
+      <h3>Anrufen oder schreiben</h3>
+      <p>Schildern Sie kurz Ihr Problem — telefonisch oder per WhatsApp, auch mit Foto.</p>
+      <div class="step-line" aria-hidden="true"></div>
     </div>
-
-    <div class="services-grid">
-      <!-- Key Service -->
-      <div class="service-card" data-service="keys">
-        <div class="service-icon-wrap">
-          <div class="service-icon-bg"></div>
-          <svg class="service-icon" viewBox="0 0 60 60" fill="none">
-            <circle cx="22" cy="22" r="16" stroke="#F5C842" stroke-width="2.5"/>
-            <circle cx="22" cy="22" r="8" fill="#F5C842" opacity="0.2" stroke="#F5C842" stroke-width="1.5"/>
-            <line x1="34" y1="34" x2="52" y2="52" stroke="#F5C842" stroke-width="3" stroke-linecap="round"/>
-            <line x1="44" y1="48" x2="44" y2="54" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="48" y1="44" x2="54" y2="44" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>Autoschlüssel-Service</h3>
-        <ul class="service-list">
-          <li>Ersatzschlüssel anfertigen</li>
-          <li>Schlüssel programmieren</li>
-          <li>Transponder &amp; Funkfernbedienungen</li>
-          <li>Zweitschlüssel erstellen</li>
-          <li>Schlüsselgehäuse reparieren</li>
-        </ul>
-        <a href="#contact" class="service-link">Mehr erfahren <span>→</span></a>
-      </div>
-
-      <!-- Car Opening -->
-      <div class="service-card featured" data-service="opening">
-        <div class="service-badge">Beliebt</div>
-        <div class="service-icon-wrap">
-          <div class="service-icon-bg"></div>
-          <svg class="service-icon" viewBox="0 0 60 60" fill="none">
-            <rect x="8" y="20" width="44" height="32" rx="5" stroke="#F5C842" stroke-width="2.5"/>
-            <path d="M20 20V14a10 10 0 0120 0v6" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
-            <circle cx="30" cy="36" r="5" fill="#F5C842" opacity="0.8"/>
-            <line x1="30" y1="41" x2="30" y2="47" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>Autoöffnung</h3>
-        <ul class="service-list">
-          <li>Fahrzeugöffnung ohne Beschädigung</li>
-          <li>Hilfe bei eingeschlossenen Schlüsseln</li>
-          <li>Notdienst vor Ort</li>
-          <li>Alle Fahrzeugmarken</li>
-          <li>24/7 verfügbar</li>
-        </ul>
-        <a href="#contact" class="service-link">Mehr erfahren <span>→</span></a>
-      </div>
-
-      <!-- Battery Service -->
-      <div class="service-card" data-service="battery">
-        <div class="service-icon-wrap">
-          <div class="service-icon-bg"></div>
-          <svg class="service-icon" viewBox="0 0 60 60" fill="none">
-            <rect x="6" y="18" width="40" height="24" rx="4" stroke="#F5C842" stroke-width="2.5"/>
-            <rect x="46" y="24" width="8" height="12" rx="3" stroke="#F5C842" stroke-width="2"/>
-            <line x1="18" y1="30" x2="22" y2="30" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="20" y1="28" x2="20" y2="32" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
-            <line x1="30" y1="30" x2="34" y2="30" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <h3>Batterie-Service</h3>
-        <ul class="service-list">
-          <li>Sofort-Starthilfe</li>
-          <li>Professioneller Batterietest</li>
-          <li>Batteriewechsel vor Ort</li>
-          <li>Alle gängigen Fahrzeuge</li>
-          <li>Schnelle Diagnose</li>
-        </ul>
-        <a href="#contact" class="service-link">Mehr erfahren <span>→</span></a>
-      </div>
-
-      <!-- Diagnostics -->
-      <div class="service-card" data-service="diagnostics">
-        <div class="service-icon-wrap">
-          <div class="service-icon-bg"></div>
-          <svg class="service-icon" viewBox="0 0 60 60" fill="none">
-            <rect x="10" y="8" width="40" height="30" rx="4" stroke="#F5C842" stroke-width="2.5"/>
-            <line x1="20" y1="38" x2="20" y2="48" stroke="#F5C842" stroke-width="2.5"/>
-            <line x1="40" y1="38" x2="40" y2="48" stroke="#F5C842" stroke-width="2.5"/>
-            <line x1="15" y1="48" x2="45" y2="48" stroke="#F5C842" stroke-width="2.5" stroke-linecap="round"/>
-            <polyline points="18,28 24,20 30,26 36,18 42,22" stroke="#F5C842" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </div>
-        <h3>Fahrzeugdiagnose</h3>
-        <ul class="service-list">
-          <li>Fehlerauslesen (OBD)</li>
-          <li>Professionelle OBD-Diagnose</li>
-          <li>Basis-Codierungen</li>
-          <li>Systemchecks</li>
-          <li>Fehlerprotokoll</li>
-        </ul>
-        <a href="#contact" class="service-link">Mehr erfahren <span>→</span></a>
-      </div>
+    <div class="step-card" data-reveal>
+      <span class="step-num mono">02</span>
+      <h3>Wir fahren los</h3>
+      <p>Unser Techniker ist in ø 30 Minuten bei Ihnen — überall in München &amp; Umland.</p>
+      <div class="step-line" aria-hidden="true"></div>
+    </div>
+    <div class="step-card" data-reveal>
+      <span class="step-num mono">03</span>
+      <h3>Problem gelöst</h3>
+      <p>Festpreis vor Beginn, professionelle Hilfe vor Ort — ohne Abschleppen, ohne Werkstatt.</p>
+      <div class="step-line" aria-hidden="true"></div>
     </div>
   </div>
 </section>
 
-<!-- How It Works -->
-<section class="how-it-works">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">So einfach geht's</span>
-      <h2 class="section-title">In 3 Schritten zur Hilfe</h2>
+<!-- ══════════ PRICES ══════════ -->
+<section class="prices" id="preise">
+  <div class="section-head" data-reveal>
+    <span class="mono section-tag">PREISE</span>
+    <h2 class="section-title"><span data-split>Transparent. Vorher.</span></h2>
+    <p class="section-sub">Sie kennen den Preis, bevor wir anfangen. Keine versteckten Kosten — versprochen.</p>
+  </div>
+
+  <div class="price-grid">
+    <div class="price-card" data-tilt data-reveal>
+      <span class="mono price-tag">AUTOÖFFNUNG</span>
+      <div class="price-value">ab 79<small>€</small></div>
+      <ul><li>Schadensfreie Öffnung vor Ort</li><li>Alle Fahrzeugmarken</li><li>24/7 Notdienst</li></ul>
+      <a href="tel:+4915735989735" class="btn btn-ghost" data-cursor="call">Anfragen</a>
+    </div>
+    <div class="price-card is-featured" data-tilt data-reveal>
+      <span class="price-flag mono">MEISTGEBUCHT</span>
+      <span class="mono price-tag">ERSATZSCHLÜSSEL</span>
+      <div class="price-value">ab 149<small>€</small></div>
+      <ul><li>Anfertigung vor Ort</li><li>Programmierung inklusive</li><li>Alle gängigen Systeme</li></ul>
+      <a href="tel:+4915735989735" class="btn btn-solid" data-cursor="call">Anfragen</a>
+    </div>
+    <div class="price-card" data-tilt data-reveal>
+      <span class="mono price-tag">BATTERIE-SERVICE</span>
+      <div class="price-value">ab 49<small>€</small></div>
+      <ul><li>Starthilfe &amp; Test</li><li>Wechsel vor Ort</li><li>Schnelle Diagnose</li></ul>
+      <a href="tel:+4915735989735" class="btn btn-ghost" data-cursor="call">Anfragen</a>
+    </div>
+    <div class="price-card" data-tilt data-reveal>
+      <span class="mono price-tag">DIAGNOSE</span>
+      <div class="price-value">ab 59<small>€</small></div>
+      <ul><li>OBD-Fehlerauslesen</li><li>Systemcheck</li><li>Fehlerprotokoll</li></ul>
+      <a href="tel:+4915735989735" class="btn btn-ghost" data-cursor="call">Anfragen</a>
+    </div>
+  </div>
+  <p class="price-note mono" data-reveal>* ENDPREIS JE NACH FAHRZEUGMODELL &amp; AUFWAND — KOSTENVORANSCHLAG IMMER VOR BEGINN.</p>
+</section>
+
+<!-- ══════════ AREA ══════════ -->
+<section class="area" id="gebiet">
+  <div class="area-grid">
+    <div class="area-map" data-reveal aria-hidden="true">
+      <div class="radar">
+        <div class="radar-sweep"></div>
+        <div class="radar-rings"><i></i><i></i><i></i></div>
+        <div class="radar-center"><span></span></div>
+        <div class="radar-dot" style="--x:50%;--y:22%;--d:0s"><b>Schwabing</b></div>
+        <div class="radar-dot" style="--x:74%;--y:34%;--d:.7s"><b>Bogenhausen</b></div>
+        <div class="radar-dot" style="--x:78%;--y:56%;--d:1.4s"><b>Haidhausen</b></div>
+        <div class="radar-dot" style="--x:64%;--y:76%;--d:2.1s"><b>Giesing</b></div>
+        <div class="radar-dot" style="--x:36%;--y:72%;--d:2.8s"><b>Sendling</b></div>
+        <div class="radar-dot" style="--x:20%;--y:52%;--d:3.5s"><b>Pasing</b></div>
+        <div class="radar-dot" style="--x:30%;--y:32%;--d:4.2s"><b>Neuhausen</b></div>
+        <span class="radar-radius mono">RADIUS 30 KM</span>
+      </div>
     </div>
 
-    <div class="steps-wrap">
-      <div class="steps-line"></div>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 40 40" fill="none"><path d="M20 4C11.16 4 4 11.16 4 20s7.16 16 16 16 16-7.16 16-16S28.84 4 20 4zm2 22h-4v-2h4v2zm0-4h-4c0-3.25 4-4 4-6a2 2 0 10-4 0h-4a6 6 0 1112 0c0 3.25-4 4-4 6z" fill="#F5C842"/></svg>
-          </div>
-          <h4>Anrufen oder schreiben</h4>
-          <p>Schildern Sie kurz Ihr Problem – telefonisch oder per WhatsApp</p>
-        </div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 40 40" fill="none"><path d="M20 4C11.16 4 4 11.16 4 20s7.16 16 16 16 16-7.16 16-16S28.84 4 20 4zm1 9v8l7 4-1.5 2.5-8.5-5V13h3z" fill="#F5C842"/></svg>
-          </div>
-          <h4>Wir kommen zu Ihnen</h4>
-          <p>Unser Techniker ist in ca. 30 Minuten bei Ihnen vor Ort</p>
-        </div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <div class="step-icon">
-            <svg viewBox="0 0 40 40" fill="none"><path d="M20 4C11.16 4 4 11.16 4 20s7.16 16 16 16 16-7.16 16-16S28.84 4 20 4zm-2 22l-6-6 2.8-2.8 3.2 3.2 8.2-8.2L28.8 14 18 26z" fill="#F5C842"/></svg>
-          </div>
-          <h4>Problem gelöst</h4>
-          <p>Professionelle Hilfe vor Ort – schnell und ohne Werkstattbesuch</p>
-        </div>
+    <div class="area-info">
+      <div class="section-head" data-reveal>
+        <span class="mono section-tag">EINSATZGEBIET</span>
+        <h2 class="section-title"><span data-split>Ganz München. Und drumherum.</span></h2>
+        <p class="section-sub">Innenstadt, Vorort oder Autobahnauffahrt — unser mobiler Techniker kommt direkt zu Ihnen. Kein Abschleppen, keine Wartezeit.</p>
       </div>
+      <div class="area-tags" data-reveal>
+        <span>München Mitte</span><span>Schwabing</span><span>Maxvorstadt</span><span>Bogenhausen</span><span>Haidhausen</span><span>Sendling</span><span>Pasing</span><span>Neuhausen</span><span>Giesing</span><span>Moosach</span><span class="is-accent">Umland +30 km</span>
+      </div>
+      <a href="tel:+4915735989735" class="btn btn-solid btn-lg" data-magnetic data-cursor="call" data-reveal>Jetzt Hilfe anfordern</a>
     </div>
   </div>
 </section>
 
-<!-- Prices Section -->
-<section class="prices" id="prices">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Preisübersicht</span>
-      <h2 class="section-title">Transparente Preise</h2>
-      <p class="section-desc">Keine versteckten Kosten – faire Preise für professionellen Service</p>
-    </div>
-
-    <div class="prices-grid">
-      <div class="price-card">
-        <div class="price-icon">
-          <svg viewBox="0 0 30 30" fill="#F5C842"><path d="M15 2a9 9 0 100 18A9 9 0 0015 2zm1 8h-2V5h2v5zm0 4h-2v-2h2v2z"/></svg>
-        </div>
-        <h3>Autoöffnung</h3>
-        <div class="price-range">ab <strong>79€</strong></div>
-        <ul>
-          <li>Fahrzeugöffnung vor Ort</li>
-          <li>Schadensfreie Methode</li>
-          <li>Alle Fahrzeugmarken</li>
-        </ul>
-        <a href="tel:+4915735989735" class="btn btn-outline-sm">Jetzt anfragen</a>
-      </div>
-
-      <div class="price-card featured">
-        <div class="price-badge">Beliebt</div>
-        <div class="price-icon">
-          <svg viewBox="0 0 30 30" fill="#F5C842"><circle cx="10" cy="10" r="7"/><line x1="16" y1="16" x2="26" y2="26" stroke="#F5C842" stroke-width="2.5"/></svg>
-        </div>
-        <h3>Ersatzschlüssel</h3>
-        <div class="price-range">ab <strong>149€</strong></div>
-        <ul>
-          <li>Schlüssel vor Ort anfertigen</li>
-          <li>Programmierung inklusive</li>
-          <li>Alle gängigen Systeme</li>
-        </ul>
-        <a href="tel:+4915735989735" class="btn btn-primary-sm">Jetzt anfragen</a>
-      </div>
-
-      <div class="price-card">
-        <div class="price-icon">
-          <svg viewBox="0 0 30 30" fill="#F5C842"><rect x="2" y="8" width="22" height="14" rx="3"/><rect x="24" y="11" width="4" height="8" rx="2"/><line x1="8" y1="15" x2="11" y2="15" stroke="#0d1a3a" stroke-width="1.5"/><line x1="9.5" y1="13.5" x2="9.5" y2="16.5" stroke="#0d1a3a" stroke-width="1.5"/></svg>
-        </div>
-        <h3>Batterie-Service</h3>
-        <div class="price-range">ab <strong>49€</strong></div>
-        <ul>
-          <li>Starthilfe &amp; Test</li>
-          <li>Batteriewechsel vor Ort</li>
-          <li>Schnelle Diagnose</li>
-        </ul>
-        <a href="tel:+4915735989735" class="btn btn-outline-sm">Jetzt anfragen</a>
-      </div>
-
-      <div class="price-card">
-        <div class="price-icon">
-          <svg viewBox="0 0 30 30" fill="#F5C842"><rect x="5" y="3" width="20" height="18" rx="2"/><line x1="5" y1="21" x2="25" y2="21" stroke="#F5C842" stroke-width="1.5"/><line x1="10" y1="24" x2="10" y2="27" stroke="#F5C842" stroke-width="2"/><line x1="20" y1="24" x2="20" y2="27" stroke="#F5C842" stroke-width="2"/><polyline points="9,14 12,10 15,13 18,9 21,11" stroke="#0d1a3a" stroke-width="1.5" fill="none"/></svg>
-        </div>
-        <h3>Fahrzeugdiagnose</h3>
-        <div class="price-range">ab <strong>59€</strong></div>
-        <ul>
-          <li>OBD-Fehlerauslesen</li>
-          <li>Systemcheck</li>
-          <li>Fehlerprotokoll</li>
-        </ul>
-        <a href="tel:+4915735989735" class="btn btn-outline-sm">Jetzt anfragen</a>
-      </div>
-    </div>
-
-    <p class="price-note">* Endpreise je nach Fahrzeugmodell und Aufwand. Kostenvoranschlag vor Beginn der Arbeit.</p>
-  </div>
-</section>
-
-<!-- Target Groups -->
-<section class="target-groups">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Zielgruppen</span>
-      <h2 class="section-title">Für wen wir arbeiten</h2>
-    </div>
-    <div class="groups-grid">
-      <div class="group-item"><span class="group-icon">👨‍👩‍👧</span><span>Privatpersonen &amp; Familien</span></div>
-      <div class="group-item"><span class="group-icon">🚶</span><span>Pendler</span></div>
-      <div class="group-item"><span class="group-icon">🏢</span><span>Firmenfahrzeuge</span></div>
-      <div class="group-item"><span class="group-icon">🚗</span><span>Gebrauchtwagenhändler</span></div>
-      <div class="group-item"><span class="group-icon">📦</span><span>Lieferdienste</span></div>
-      <div class="group-item"><span class="group-icon">🚕</span><span>Taxi &amp; Mietwagen</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- Reviews -->
+<!-- ══════════ REVIEWS ══════════ -->
 <section class="reviews">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Kundenstimmen</span>
-      <h2 class="section-title">Das sagen unsere Kunden</h2>
-    </div>
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>"Schlüssel im Auto eingeschlossen – Youbi Key Solutions war in 25 Minuten da! Sehr professionell und absolut keine Beschädigungen. Kann ich nur empfehlen."</p>
-        <div class="reviewer"><div class="reviewer-avatar">M</div><div><strong>Michael K.</strong><span>München, Schwabing</span></div></div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>"Ersatzschlüssel für meinen BMW direkt vor Ort programmiert. Günstiger als beim Händler und deutlich schneller. Top Service!"</p>
-        <div class="reviewer"><div class="reviewer-avatar">S</div><div><strong>Sandra B.</strong><span>München, Maxvorstadt</span></div></div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p>"Batterie leer auf dem Weg zur Arbeit. Innerhalb von 20 Minuten war Hilfe da und das Auto wieder fahrtüchtig. Perfekter Service!"</p>
-        <div class="reviewer"><div class="reviewer-avatar">T</div><div><strong>Thomas R.</strong><span>München, Pasing</span></div></div>
-      </div>
-    </div>
+  <div class="section-head" data-reveal>
+    <span class="mono section-tag">KUNDENSTIMMEN</span>
+    <h2 class="section-title"><span data-split>Nachts um drei erreichbar.</span></h2>
+  </div>
+  <div class="review-grid">
+    <figure class="review-card" data-reveal>
+      <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+      <blockquote>„Schlüssel im Auto eingeschlossen — YOUBIKEYCAR war in 25 Minuten da. Sehr professionell, absolut keine Beschädigungen."</blockquote>
+      <figcaption><span class="review-avatar" aria-hidden="true">M</span><div><strong>Michael K.</strong><span class="mono">SCHWABING</span></div></figcaption>
+    </figure>
+    <figure class="review-card" data-reveal>
+      <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+      <blockquote>„Ersatzschlüssel für meinen BMW direkt vor Ort programmiert. Günstiger als beim Händler und deutlich schneller."</blockquote>
+      <figcaption><span class="review-avatar" aria-hidden="true">S</span><div><strong>Sandra B.</strong><span class="mono">MAXVORSTADT</span></div></figcaption>
+    </figure>
+    <figure class="review-card" data-reveal>
+      <div class="review-stars" aria-label="5 von 5 Sternen">★★★★★</div>
+      <blockquote>„Batterie leer auf dem Weg zur Arbeit. Nach 20 Minuten war Hilfe da und das Auto wieder fahrtüchtig. Perfekt."</blockquote>
+      <figcaption><span class="review-avatar" aria-hidden="true">T</span><div><strong>Thomas R.</strong><span class="mono">PASING</span></div></figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- Service Area -->
-<section class="area" id="area">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Einsatzgebiet</span>
-      <h2 class="section-title">München &amp; Umgebung</h2>
-      <p class="section-desc">Wir sind in ganz München und im Umkreis von 30 km für Sie im Einsatz</p>
-    </div>
-
-    <div class="area-content">
-      <div class="area-map">
-        <div class="map-container" id="mapContainer">
-          <svg viewBox="0 0 400 400" class="munich-map">
-            <!-- Map background -->
-            <circle cx="200" cy="200" r="195" fill="#0d1a3a" stroke="#1e3060" stroke-width="2"/>
-            <!-- Coverage zones -->
-            <circle cx="200" cy="200" r="160" fill="none" stroke="#F5C842" stroke-width="1" stroke-dasharray="6,4" opacity="0.3"/>
-            <circle cx="200" cy="200" r="110" fill="#F5C842" opacity="0.06"/>
-            <circle cx="200" cy="200" r="70" fill="#F5C842" opacity="0.1"/>
-            <!-- City center dot -->
-            <circle cx="200" cy="200" r="10" fill="#F5C842"/>
-            <circle cx="200" cy="200" r="6" fill="#0d1a3a"/>
-            <!-- District dots -->
-            <circle cx="200" cy="140" r="5" fill="#F5C842" opacity="0.7"/><text x="210" y="143" fill="white" font-size="11" font-family="Roboto">Schwabing</text>
-            <circle cx="260" cy="170" r="5" fill="#F5C842" opacity="0.7"/><text x="270" y="173" fill="white" font-size="11" font-family="Roboto">Bogenhausen</text>
-            <circle cx="270" cy="220" r="5" fill="#F5C842" opacity="0.7"/><text x="280" y="223" fill="white" font-size="11" font-family="Roboto">Haidhausen</text>
-            <circle cx="240" cy="270" r="5" fill="#F5C842" opacity="0.7"/><text x="248" y="273" fill="white" font-size="11" font-family="Roboto">Giesing</text>
-            <circle cx="160" cy="260" r="5" fill="#F5C842" opacity="0.7"/><text x="100" y="263" fill="white" font-size="11" font-family="Roboto">Sendling</text>
-            <circle cx="130" cy="210" r="5" fill="#F5C842" opacity="0.7"/><text x="50" y="213" fill="white" font-size="11" font-family="Roboto">Pasing</text>
-            <circle cx="140" cy="160" r="5" fill="#F5C842" opacity="0.7"/><text x="60" y="163" fill="white" font-size="11" font-family="Roboto">Neuhausen</text>
-            <!-- Center label -->
-            <text x="200" y="222" text-anchor="middle" fill="#F5C842" font-size="12" font-family="Poppins" font-weight="600">Stadtzentrum</text>
-            <!-- Radius label -->
-            <text x="200" y="50" text-anchor="middle" fill="rgba(255,255,255,0.5)" font-size="11" font-family="Roboto">Radius 30 km</text>
-          </svg>
-          <div class="map-pulse"></div>
-        </div>
-      </div>
-
-      <div class="area-info">
-        <h3>Wir sind überall in München</h3>
-        <p>Egal ob Innenstadt, Vorort oder Autobahnauffahrt – unser mobiler Techniker kommt direkt zu Ihnen. Kein Abschleppen, keine Wartezeit.</p>
-        <div class="area-list">
-          <div class="area-tag">München Mitte</div>
-          <div class="area-tag">Schwabing</div>
-          <div class="area-tag">Maxvorstadt</div>
-          <div class="area-tag">Bogenhausen</div>
-          <div class="area-tag">Haidhausen</div>
-          <div class="area-tag">Sendling</div>
-          <div class="area-tag">Pasing</div>
-          <div class="area-tag">Neuhausen</div>
-          <div class="area-tag">Giesing</div>
-          <div class="area-tag">Moosach</div>
-          <div class="area-tag">Umland +30km</div>
-        </div>
-        <a href="tel:+4915735989735" class="btn btn-primary">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 11a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
-          Jetzt Hilfe anfordern
-        </a>
-      </div>
-    </div>
+<!-- ══════════ FAQ ══════════ -->
+<section class="faq" id="faq">
+  <div class="section-head" data-reveal>
+    <span class="mono section-tag">FAQ</span>
+    <h2 class="section-title"><span data-split>Kurz beantwortet</span></h2>
+  </div>
+  <div class="faq-list">
+    <details class="faq-item" data-reveal>
+      <summary data-cursor="open">Wie schnell sind Sie bei mir?<span class="faq-icon" aria-hidden="true"></span></summary>
+      <p>Innerhalb Münchens sind wir im Schnitt in 30 Minuten vor Ort — auch nachts, am Wochenende und an Feiertagen.</p>
+    </details>
+    <details class="faq-item" data-reveal>
+      <summary data-cursor="open">Entstehen Schäden beim Öffnen?<span class="faq-icon" aria-hidden="true"></span></summary>
+      <p>Nein. Wir arbeiten mit professionellem Spezialwerkzeug und öffnen Ihr Fahrzeug schadensfrei — ohne Kratzer, ohne aufgebrochene Tür.</p>
+    </details>
+    <details class="faq-item" data-reveal>
+      <summary data-cursor="open">Was kostet der Einsatz?<span class="faq-icon" aria-hidden="true"></span></summary>
+      <p>Autoöffnung ab 79 €, Ersatzschlüssel ab 149 €, Batterie-Service ab 49 €, Diagnose ab 59 €. Den genauen Preis nennen wir Ihnen immer vor Beginn der Arbeit.</p>
+    </details>
+    <details class="faq-item" data-reveal>
+      <summary data-cursor="open">Können Sie jeden Autoschlüssel nachmachen?<span class="faq-icon" aria-hidden="true"></span></summary>
+      <p>Wir fertigen und programmieren Schlüssel für alle gängigen Marken — inklusive Transponder, Funkfernbedienung und Keyless-Systemen, direkt vor Ort.</p>
+    </details>
   </div>
 </section>
 
-<!-- About Section -->
-<section class="about" id="about">
-  <div class="container">
-    <div class="about-content">
-      <div class="about-visual">
-        <div class="about-image-wrap">
-          <div class="about-badge-circle">
-            <span class="big-num">5★</span>
-            <span>Bewertung</span>
-          </div>
-          <svg class="about-illustration" viewBox="0 0 320 280" fill="none">
-            <rect x="40" y="100" width="240" height="140" rx="12" fill="#1a2744"/>
-            <rect x="60" y="80" width="200" height="20" rx="4" fill="#0d1a3a" stroke="#1e3060" stroke-width="1"/>
-            <path d="M80 130 Q160 110 240 130" stroke="#F5C842" stroke-width="2" fill="none" opacity="0.5"/>
-            <circle cx="100" cy="160" r="25" fill="#0d1a3a" stroke="#F5C842" stroke-width="2"/>
-            <circle cx="100" cy="160" r="10" fill="#F5C842" opacity="0.4"/>
-            <circle cx="220" cy="160" r="25" fill="#0d1a3a" stroke="#F5C842" stroke-width="2"/>
-            <circle cx="220" cy="160" r="10" fill="#F5C842" opacity="0.4"/>
-            <rect x="90" y="100" width="140" height="50" rx="6" fill="#0d1a3a" stroke="#1e3060"/>
-            <text x="160" y="132" text-anchor="middle" fill="#F5C842" font-size="16" font-family="Poppins" font-weight="700">YOUBI</text>
-            <rect x="130" y="200" width="60" height="40" rx="4" fill="#1e3060"/>
-            <!-- tools -->
-            <rect x="170" y="140" width="35" height="15" rx="3" fill="#2a3f6f" stroke="#F5C842" stroke-width="0.5"/>
-            <text x="175" y="151" fill="#F5C842" font-size="7" font-family="Roboto">OBD PRO</text>
-          </svg>
-        </div>
-      </div>
+<!-- ══════════ CONTACT ══════════ -->
+<section class="contact" id="kontakt">
+  <div class="contact-head" data-reveal>
+    <span class="mono section-tag">NOTFALL? KEIN NOTFALL? EGAL.</span>
+    <h2 class="contact-title"><span data-split>RUFEN SIE AN.</span></h2>
+    <a href="tel:+4915735989735" class="contact-phone" data-cursor="call" id="bigPhone">
+      <span>+49&nbsp;157&nbsp;3598&nbsp;9735</span>
+    </a>
+    <p class="contact-sub">24/7 erreichbar — oder schreiben Sie uns per WhatsApp, gern auch mit Foto.</p>
+  </div>
 
-      <div class="about-text">
-        <span class="section-label">Über uns</span>
-        <h2 class="section-title">Ihr Spezialist für Autoschlüssel in München</h2>
-        <p>Youbi Key Solutions ist Ihr zuverlässiger mobiler Partner, wenn es um Autoschlüssel, Fahrzeugöffnungen und Batterie-Service geht. Wir kommen direkt zu Ihnen – egal ob auf dem Parkplatz, zu Hause oder unterwegs.</p>
-        <p>Mit modernster Ausrüstung und jahrelanger Erfahrung lösen wir Ihr Problem schnell, professionell und transparent. Keine versteckten Kosten, kein unnötiger Abschleppdienst.</p>
-
-        <div class="about-features">
-          <div class="about-feature">
-            <svg viewBox="0 0 20 20" fill="#F5C842"><path d="M10 1L12.4 7.4H19L13.5 11.5 15.9 17.9 10 13.8 4.1 17.9 6.5 11.5 1 7.4H7.6z"/></svg>
-            <span>Zertifizierter Fachbetrieb</span>
-          </div>
-          <div class="about-feature">
-            <svg viewBox="0 0 20 20" fill="#F5C842"><path d="M10 1L12.4 7.4H19L13.5 11.5 15.9 17.9 10 13.8 4.1 17.9 6.5 11.5 1 7.4H7.6z"/></svg>
-            <span>Modernste Schlüssel-Technologie</span>
-          </div>
-          <div class="about-feature">
-            <svg viewBox="0 0 20 20" fill="#F5C842"><path d="M10 1L12.4 7.4H19L13.5 11.5 15.9 17.9 10 13.8 4.1 17.9 6.5 11.5 1 7.4H7.6z"/></svg>
-            <span>Alle Fahrzeugmarken &amp; Modelle</span>
-          </div>
-          <div class="about-feature">
-            <svg viewBox="0 0 20 20" fill="#F5C842"><path d="M10 1L12.4 7.4H19L13.5 11.5 15.9 17.9 10 13.8 4.1 17.9 6.5 11.5 1 7.4H7.6z"/></svg>
-            <span>24/7 Notdienst in München</span>
-          </div>
-        </div>
+  <div class="contact-grid">
+    <form class="contact-form" id="contactForm" data-reveal>
+      <div class="form-row">
+        <label class="field"><span class="mono">IHR NAME</span><input type="text" name="name" placeholder="Max Mustermann" required autocomplete="name"></label>
+        <label class="field"><span class="mono">TELEFON</span><input type="tel" name="phone" placeholder="+49 …" required autocomplete="tel"></label>
       </div>
-    </div>
+      <label class="field"><span class="mono">FAHRZEUG</span><input type="text" name="car" placeholder="z. B. BMW 3er, VW Golf …"></label>
+      <label class="field"><span class="mono">ANLIEGEN</span>
+        <select name="service">
+          <option>Autoöffnung</option>
+          <option>Ersatzschlüssel</option>
+          <option>Batterie-Service</option>
+          <option>Fahrzeugdiagnose</option>
+          <option>Sonstiges</option>
+        </select>
+      </label>
+      <label class="field"><span class="mono">NACHRICHT</span><textarea name="msg" rows="3" placeholder="Kurze Beschreibung — wo stehen Sie, was ist passiert?"></textarea></label>
+      <button type="submit" class="btn btn-solid btn-lg btn-full" data-cursor="hover">
+        Per WhatsApp senden
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+      </button>
+      <p class="form-hint mono">ÖFFNET WHATSAPP MIT IHRER NACHRICHT — NICHTS WIRD GESPEICHERT.</p>
+    </form>
+
+    <aside class="contact-aside" data-reveal>
+      <div class="contact-tile">
+        <span class="mono">DIREKT</span>
+        <a href="tel:+4915735989735" data-cursor="call">+49 157 3598 9735</a>
+        <p>Rund um die Uhr, auch an Feiertagen.</p>
+      </div>
+      <div class="contact-tile">
+        <span class="mono">WHATSAPP</span>
+        <a href="https://wa.me/4915735989735" target="_blank" rel="noopener" data-cursor="hover">Chat starten →</a>
+        <p>Sofort-Antwort, Foto senden möglich.</p>
+      </div>
+      <div class="contact-tile">
+        <span class="mono">EINSATZGEBIET</span>
+        <a href="#gebiet" data-cursor="hover">München + 30 km →</a>
+        <p>Innenstadt bis Umland — wir kommen.</p>
+      </div>
+    </aside>
   </div>
 </section>
 
-<!-- Contact Section -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="section-header">
-      <span class="section-label">Kontakt</span>
-      <h2 class="section-title">Wir helfen Ihnen sofort</h2>
-      <p class="section-desc">Schildern Sie Ihr Problem – wir melden uns umgehend</p>
-    </div>
+</main>
 
-    <div class="contact-content">
-      <div class="contact-cards">
-        <a href="tel:+4915735989735" class="contact-card contact-call">
-          <div class="contact-card-icon">
-            <svg viewBox="0 0 40 40" fill="none" stroke="white" stroke-width="2"><path d="M36 27.5v5a3.33 3.33 0 01-3.63 3.33A32.98 32.98 0 0118 30.7a32.5 32.5 0 01-10-10 32.98 32.98 0 01-5.13-14.4A3.33 3.33 0 016.17 3h5a3.33 3.33 0 013.33 2.87 21.38 21.38 0 001.17 4.68 3.33 3.33 0 01-.75 3.52l-2.1 2.1a26.67 26.67 0 0010 10l2.1-2.1a3.33 3.33 0 013.52-.75 21.38 21.38 0 004.68 1.17A3.33 3.33 0 0136 27.5z"/></svg>
-          </div>
-          <div class="contact-card-text">
-            <span>Jetzt anrufen</span>
-            <strong>+49 157 35989735</strong>
-            <small>24/7 erreichbar</small>
-          </div>
-        </a>
-
-        <a href="https://wa.me/4915735989735" class="contact-card contact-whatsapp" target="_blank" rel="noopener">
-          <div class="contact-card-icon">
-            <svg viewBox="0 0 40 40" fill="white"><path d="M29.12 23.97c-.5-.25-2.93-1.45-3.38-1.61-.45-.17-.78-.25-1.12.25-.33.5-1.28 1.61-1.57 1.94-.28.33-.57.37-1.07.12-.5-.25-2.09-.77-3.98-2.46-1.47-1.31-2.47-2.93-2.76-3.43-.28-.5-.03-.76.22-1.01.22-.22.5-.58.74-.87.25-.29.33-.5.5-.83.17-.33.08-.62-.04-.87-.12-.25-1.12-2.69-1.53-3.68-.4-1-.82-.87-1.12-.89-.29-.01-.62-.01-1.95-.01s-1.74.5-2.24 1c-.5.5-1.87 1.87-1.87 4.56 0 2.69 1.91 5.28 2.19 5.65.28.37 3.77 5.77 9.12 8.09 1.27.54 2.26.86 3.03 1.1 1.27.4 2.43.34 3.35.21 1.02-.15 3.14-1.28 3.58-2.52.44-1.23.44-2.29.31-2.51-.12-.22-.45-.34-.95-.59zm-9.62 13.16h-.01a16.37 16.37 0 01-8.38-2.3l-.6-.36-6.23 1.63 1.66-6.07-.39-.62a16.43 16.43 0 01-2.52-8.77c.01-9.08 7.4-16.47 16.49-16.47 4.4 0 8.54 1.72 11.65 4.84a16.38 16.38 0 014.82 11.66c-.01 9.08-7.4 16.46-16.49 16.46zm14.03-30.5A19.86 19.86 0 0020.07 0C9.03 0 .04 8.99.03 20.03c0 3.49.91 6.9 2.64 9.91L0 40l10.3-2.7a19.87 19.87 0 009.76 2.48h.01C31.11 39.78 40 30.79 40 19.75c0-5.33-2.08-10.34-5.47-14.12z"/></svg>
-          </div>
-          <div class="contact-card-text">
-            <span>WhatsApp schreiben</span>
-            <strong>Sofort-Antwort</strong>
-            <small>Foto senden möglich</small>
-          </div>
-        </a>
-      </div>
-
-      <form class="contact-form" id="contactForm">
-        <div class="form-row">
-          <div class="form-group">
-            <label>Ihr Name</label>
-            <input type="text" placeholder="Max Mustermann" required>
-          </div>
-          <div class="form-group">
-            <label>Telefon</label>
-            <input type="tel" placeholder="+49 ..." required>
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Fahrzeug</label>
-          <input type="text" placeholder="z.B. BMW 3er, VW Golf ...">
-        </div>
-        <div class="form-group">
-          <label>Leistung</label>
-          <select>
-            <option>Autoöffnung</option>
-            <option>Autoschlüssel-Service</option>
-            <option>Batterie-Service</option>
-            <option>Fahrzeugdiagnose</option>
-            <option>Sonstiges</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Nachricht</label>
-          <textarea rows="3" placeholder="Kurze Beschreibung Ihres Problems..."></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary btn-full">
-          Anfrage absenden
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
+<!-- ══════════ FOOTER ══════════ -->
 <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="#home" class="nav-logo">
-          <div class="logo-icon">
-            <svg viewBox="0 0 40 40" fill="none">
-              <circle cx="20" cy="20" r="19" stroke="#F5C842" stroke-width="2"/>
-              <path d="M20 8a8 8 0 100 16 8 8 0 000-16zm0 13a5 5 0 110-10 5 5 0 010 10z" fill="#F5C842"/>
-              <rect x="24" y="19" width="10" height="3" rx="1.5" fill="#F5C842"/>
-              <rect x="30" y="22" width="3" height="3" rx="1" fill="#F5C842"/>
-              <rect x="27" y="22" width="3" height="5" rx="1" fill="#F5C842"/>
-            </svg>
-          </div>
-          <span>Youbi <strong>Key Solutions</strong></span>
-        </a>
-        <p>Mobiler Autoschlüssel- &amp; Auto-Notdienst in München. Schnell, professionell, transparent.</p>
-        <div class="footer-contact-info">
-          <a href="tel:+4915735989735">📞 +49 157 35989735</a>
-          <a href="https://wa.me/4915735989735" target="_blank" rel="noopener">💬 WhatsApp</a>
-        </div>
-      </div>
-
-      <div class="footer-links">
-        <h4>Leistungen</h4>
-        <ul>
-          <li><a href="#services">Autoschlüssel-Service</a></li>
-          <li><a href="#services">Autoöffnung</a></li>
-          <li><a href="#services">Batterie-Service</a></li>
-          <li><a href="#services">Fahrzeugdiagnose</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4>Unternehmen</h4>
-        <ul>
-          <li><a href="#about">Über uns</a></li>
-          <li><a href="#prices">Preise</a></li>
-          <li><a href="#area">Einsatzgebiet</a></li>
-          <li><a href="#contact">Kontakt</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4>Einsatzgebiet</h4>
-        <ul>
-          <li><a href="#area">München Mitte</a></li>
-          <li><a href="#area">Schwabing</a></li>
-          <li><a href="#area">Maxvorstadt</a></li>
-          <li><a href="#area">Umland +30km</a></li>
-        </ul>
-      </div>
+  <div class="footer-word" aria-hidden="true"><span data-split-footer>YOUBIKEYCAR</span></div>
+  <div class="footer-grid">
+    <div class="footer-col footer-brand">
+      <p>Mobiler Autoschlüssel- &amp; Auto-Notdienst in München.<br>Schnell. Schadensfrei. Transparent.</p>
+      <div class="footer-clock mono"><span class="clock-dot"></span>MÜNCHEN · <span id="footClock">--:--</span> · JETZT ERREICHBAR</div>
     </div>
-
-    <div class="footer-bottom">
-      <p>&copy; 2025 Youbi Key Solutions. Alle Rechte vorbehalten.</p>
-      <div class="footer-legal">
-        <a href="#">Impressum</a>
-        <a href="#">Datenschutz</a>
-        <a href="#">AGB</a>
-      </div>
+    <div class="footer-col">
+      <span class="mono footer-h">LEISTUNGEN</span>
+      <a href="#leistungen">Autoöffnung</a>
+      <a href="#leistungen">Ersatzschlüssel</a>
+      <a href="#leistungen">Batterie-Service</a>
+      <a href="#leistungen">Fahrzeugdiagnose</a>
     </div>
+    <div class="footer-col">
+      <span class="mono footer-h">KONTAKT</span>
+      <a href="tel:+4915735989735">+49 157 3598 9735</a>
+      <a href="https://wa.me/4915735989735" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="#gebiet">Einsatzgebiet</a>
+      <a href="#preise">Preise</a>
+    </div>
+    <div class="footer-col">
+      <span class="mono footer-h">RECHTLICHES</span>
+      <a href="#">Impressum</a>
+      <a href="#">Datenschutz</a>
+      <a href="#">AGB</a>
+    </div>
+  </div>
+  <div class="footer-bottom mono">
+    <span>© 2026 YOUBIKEYCAR — ALLE RECHTE VORBEHALTEN</span>
+    <a href="#top" id="backTop" data-cursor="hover">NACH OBEN ↑</a>
   </div>
 </footer>
 
-<script src="assets/js/main.js"></script>
+<!-- Floating mobile CTA -->
+<div class="float-cta" id="floatCta">
+  <a href="tel:+4915735989735" class="btn btn-solid">Anrufen</a>
+  <a href="https://wa.me/4915735989735" target="_blank" rel="noopener" class="btn btn-whatsapp">WhatsApp</a>
+</div>
+
 </body>
 </html>
