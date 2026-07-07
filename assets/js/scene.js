@@ -1,4 +1,4 @@
-/* MUNICHKEY — Three.js hero scene
+/* YOUBIKEYCAR — Three.js hero scene
    A procedural 3D car key fob floating in a particle field.
    Exposes window.MKScene = { setScroll(progress) } for main.js. */
 (function () {

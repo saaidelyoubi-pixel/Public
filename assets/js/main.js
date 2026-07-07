@@ -1,4 +1,4 @@
-/* MUNICHKEY — interactions & animation choreography */
+/* YOUBIKEYCAR — interactions & animation choreography */
 (function () {
   "use strict";
 
@@ -62,7 +62,7 @@
       e.preventDefault();
       var d = new FormData(form);
       var msg =
-        "Hallo MUNICHKEY!%0A" +
+        "Hallo YOUBIKEYCAR!%0A" +
         "Name: " + encodeURIComponent(d.get("name") || "-") + "%0A" +
         "Telefon: " + encodeURIComponent(d.get("phone") || "-") + "%0A" +
         "Fahrzeug: " + encodeURIComponent(d.get("car") || "-") + "%0A" +
