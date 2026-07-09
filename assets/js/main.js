@@ -68,7 +68,7 @@
         "Fahrzeug: " + encodeURIComponent(d.get("car") || "-") + "%0A" +
         "Anliegen: " + encodeURIComponent(d.get("service") || "-") + "%0A" +
         "Nachricht: " + encodeURIComponent(d.get("msg") || "-");
-      window.open("https://wa.me/4915735989735?text=" + msg, "_blank", "noopener");
+      window.open("https://wa.me/4917643853156?text=" + msg, "_blank", "noopener");
     });
   }
 
