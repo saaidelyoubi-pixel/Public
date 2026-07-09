@@ -59,58 +59,63 @@
       return s;
     }
 
-    var bodyMat = new THREE.MeshStandardMaterial({ color: 0x1a1b21, metalness: 0.85, roughness: 0.32 });
-    var darkMat = new THREE.MeshStandardMaterial({ color: 0x101014, metalness: 0.7, roughness: 0.45 });
-    var amberMat = new THREE.MeshStandardMaterial({ color: 0xffb700, emissive: 0xff8a00, emissiveIntensity: 0.55, metalness: 0.4, roughness: 0.3 });
-    var steelMat = new THREE.MeshStandardMaterial({ color: 0xc8c6bd, metalness: 1.0, roughness: 0.25 });
-
-    // fob body
-    var fobGeo = new THREE.ExtrudeGeometry(roundedRectShape(2.1, 3.1, 0.75), {
-      depth: 0.5, bevelEnabled: true, bevelThickness: 0.14, bevelSize: 0.14, bevelSegments: 4, curveSegments: 24
+    /* modern keyless smart key: glossy pebble body, chrome side band,
+       flush buttons, glowing emblem + LED — no exposed blade */
+    var bodyMat = new THREE.MeshPhysicalMaterial({
+      color: 0x0e0f13, metalness: 0.35, roughness: 0.22,
+      clearcoat: 1.0, clearcoatRoughness: 0.12
     });
-    fobGeo.center();
-    key.add(new THREE.Mesh(fobGeo, bodyMat));
+    var chromeMat = new THREE.MeshStandardMaterial({ color: 0xd9dbe0, metalness: 1.0, roughness: 0.15 });
+    var btnMat = new THREE.MeshStandardMaterial({ color: 0x23252c, metalness: 0.6, roughness: 0.42 });
+    var amberMat = new THREE.MeshStandardMaterial({ color: 0xffab00, emissive: 0xff8a00, emissiveIntensity: 0.9, metalness: 0.3, roughness: 0.3 });
 
-    // face plate
-    var plateGeo = new THREE.ExtrudeGeometry(roundedRectShape(1.7, 2.6, 0.6), {
-      depth: 0.06, bevelEnabled: false, curveSegments: 24
-    });
-    plateGeo.center();
-    var plate = new THREE.Mesh(plateGeo, darkMat);
-    plate.position.z = 0.42;
-    key.add(plate);
-
-    // buttons: unlock (amber, glowing), lock, trunk
-    function button(y, mat, r) {
-      var b = new THREE.Mesh(new THREE.CylinderGeometry(r, r, 0.14, 28), mat);
-      b.rotation.x = Math.PI / 2;
-      b.position.set(0, y, 0.52);
-      return b;
+    function extrude(shape, depth, bevel) {
+      var g = new THREE.ExtrudeGeometry(shape, {
+        depth: depth, bevelEnabled: true, bevelThickness: bevel, bevelSize: bevel,
+        bevelSegments: 4, curveSegments: 28
+      });
+      g.center();
+      return g;
     }
-    key.add(button(0.75, amberMat, 0.34));
-    key.add(button(0.0, bodyMat, 0.3));
-    key.add(button(-0.7, bodyMat, 0.26));
 
-    // key ring
-    var ring = new THREE.Mesh(new THREE.TorusGeometry(0.45, 0.09, 16, 40), steelMat);
-    ring.position.set(0, 1.95, 0);
-    key.add(ring);
+    // pebble body
+    key.add(new THREE.Mesh(extrude(roundedRectShape(1.9, 3.6, 0.9), 0.5, 0.18), bodyMat));
 
-    // blade (folded out to the side)
-    var bladeShape = new THREE.Shape();
-    bladeShape.moveTo(0, -0.13);
-    bladeShape.lineTo(2.0, -0.13);
-    bladeShape.lineTo(2.0, 0.02);
-    bladeShape.lineTo(1.78, 0.02); bladeShape.lineTo(1.72, 0.13);
-    bladeShape.lineTo(1.5, 0.02); bladeShape.lineTo(1.34, 0.13);
-    bladeShape.lineTo(1.18, 0.02); bladeShape.lineTo(1.0, 0.13);
-    bladeShape.lineTo(0.88, 0.02); bladeShape.lineTo(0, 0.02);
-    bladeShape.closePath();
-    var bladeGeo = new THREE.ExtrudeGeometry(bladeShape, { depth: 0.1, bevelEnabled: false });
-    var blade = new THREE.Mesh(bladeGeo, steelMat);
-    blade.position.set(0.9, -1.05, -0.05);
-    blade.rotation.z = -0.5;
-    key.add(blade);
+    // chrome band around the edge
+    var band = new THREE.Mesh(extrude(roundedRectShape(1.98, 3.68, 0.94), 0.1, 0.03), chromeMat);
+    key.add(band);
+
+    // flush pill buttons (unlock / lock) + round trunk button
+    function pill(y) {
+      var m = new THREE.Mesh(extrude(roundedRectShape(0.72, 0.34, 0.17), 0.05, 0.02), btnMat);
+      m.position.set(0, y, 0.42);
+      return m;
+    }
+    key.add(pill(0.55));
+    key.add(pill(0.05));
+    var trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.17, 0.17, 0.07, 28), btnMat);
+    trunk.rotation.x = Math.PI / 2;
+    trunk.position.set(0, -0.5, 0.44);
+    key.add(trunk);
+
+    // brand emblem: glowing amber ring with dark centre
+    var emblem = new THREE.Mesh(new THREE.TorusGeometry(0.24, 0.045, 14, 36), amberMat);
+    emblem.position.set(0, 1.18, 0.42);
+    key.add(emblem);
+    var emblemCore = new THREE.Mesh(new THREE.CylinderGeometry(0.19, 0.19, 0.04, 28), btnMat);
+    emblemCore.rotation.x = Math.PI / 2;
+    emblemCore.position.set(0, 1.18, 0.4);
+    key.add(emblemCore);
+
+    // status LED
+    var led = new THREE.Mesh(new THREE.SphereGeometry(0.055, 16, 16), amberMat);
+    led.position.set(0.55, -1.15, 0.42);
+    key.add(led);
+
+    // slim chrome lanyard loop, half-embedded at the bottom
+    var lanyard = new THREE.Mesh(new THREE.TorusGeometry(0.22, 0.05, 12, 30), chromeMat);
+    lanyard.position.set(0, -1.98, 0);
+    key.add(lanyard);
 
     key.rotation.set(0.35, -0.55, -0.12);
     scene.add(key);
