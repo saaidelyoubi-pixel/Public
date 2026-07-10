@@ -59,63 +59,87 @@
       return s;
     }
 
-    /* modern keyless smart key: glossy pebble body, chrome side band,
-       flush buttons, glowing emblem + LED — no exposed blade */
+    /* VW-style flip key (like the reference photo): angular black body
+       with chrome side trim, three stacked buttons, top screw emblem,
+       LED and a folded-out chrome blade */
     var bodyMat = new THREE.MeshPhysicalMaterial({
-      color: 0x0e0f13, metalness: 0.35, roughness: 0.22,
-      clearcoat: 1.0, clearcoatRoughness: 0.12
+      color: 0x0a0b0d, metalness: 0.3, roughness: 0.35,
+      clearcoat: 0.8, clearcoatRoughness: 0.25
     });
-    var chromeMat = new THREE.MeshStandardMaterial({ color: 0xd9dbe0, metalness: 1.0, roughness: 0.15 });
-    var btnMat = new THREE.MeshStandardMaterial({ color: 0x23252c, metalness: 0.6, roughness: 0.42 });
+    var chromeMat = new THREE.MeshStandardMaterial({ color: 0xe2e4e8, metalness: 1.0, roughness: 0.12 });
+    var btnMat = new THREE.MeshStandardMaterial({ color: 0x17181c, metalness: 0.5, roughness: 0.45 });
+    var iconMat = new THREE.MeshStandardMaterial({ color: 0xd8dadd, metalness: 0.1, roughness: 0.5 });
     var amberMat = new THREE.MeshStandardMaterial({ color: 0xffab00, emissive: 0xff8a00, emissiveIntensity: 0.9, metalness: 0.3, roughness: 0.3 });
 
     function extrude(shape, depth, bevel) {
       var g = new THREE.ExtrudeGeometry(shape, {
         depth: depth, bevelEnabled: true, bevelThickness: bevel, bevelSize: bevel,
-        bevelSegments: 4, curveSegments: 28
+        bevelSegments: 3, curveSegments: 20
       });
       g.center();
       return g;
     }
 
-    // pebble body
-    key.add(new THREE.Mesh(extrude(roundedRectShape(1.9, 3.6, 0.9), 0.5, 0.18), bodyMat));
+    // angular slab body (small corner radius = crisp edges)
+    key.add(new THREE.Mesh(extrude(roundedRectShape(1.95, 3.7, 0.32), 0.55, 0.1), bodyMat));
 
-    // chrome band around the edge
-    var band = new THREE.Mesh(extrude(roundedRectShape(1.98, 3.68, 0.94), 0.1, 0.03), chromeMat);
+    // chrome side trim band
+    var band = new THREE.Mesh(extrude(roundedRectShape(2.03, 3.78, 0.34), 0.12, 0.02), chromeMat);
     key.add(band);
 
-    // flush pill buttons (unlock / lock) + round trunk button
-    function pill(y) {
-      var m = new THREE.Mesh(extrude(roundedRectShape(0.72, 0.34, 0.17), 0.05, 0.02), btnMat);
-      m.position.set(0, y, 0.42);
-      return m;
+    // three stacked buttons (lock / trunk / unlock) with light icon plates
+    function keyButton(y) {
+      var b = new THREE.Mesh(extrude(roundedRectShape(1.15, 0.52, 0.2), 0.05, 0.02), btnMat);
+      b.position.set(0, y, 0.42);
+      key.add(b);
+      var icon = new THREE.Mesh(extrude(roundedRectShape(0.26, 0.22, 0.07), 0.02, 0.008), iconMat);
+      icon.position.set(0, y, 0.47);
+      key.add(icon);
     }
-    key.add(pill(0.55));
-    key.add(pill(0.05));
-    var trunk = new THREE.Mesh(new THREE.CylinderGeometry(0.17, 0.17, 0.07, 28), btnMat);
-    trunk.rotation.x = Math.PI / 2;
-    trunk.position.set(0, -0.5, 0.44);
-    key.add(trunk);
+    keyButton(0.45);
+    keyButton(-0.18);
+    keyButton(-0.81);
 
-    // brand emblem: glowing amber ring with dark centre
-    var emblem = new THREE.Mesh(new THREE.TorusGeometry(0.24, 0.045, 14, 36), amberMat);
-    emblem.position.set(0, 1.18, 0.42);
-    key.add(emblem);
-    var emblemCore = new THREE.Mesh(new THREE.CylinderGeometry(0.19, 0.19, 0.04, 28), btnMat);
-    emblemCore.rotation.x = Math.PI / 2;
-    emblemCore.position.set(0, 1.18, 0.4);
-    key.add(emblemCore);
+    // top screw emblem (chrome ring, dark core, slot)
+    var screwRing = new THREE.Mesh(new THREE.CylinderGeometry(0.3, 0.3, 0.06, 32), chromeMat);
+    screwRing.rotation.x = Math.PI / 2;
+    screwRing.position.set(0, 1.38, 0.29);
+    key.add(screwRing);
+    var screwCore = new THREE.Mesh(new THREE.CylinderGeometry(0.22, 0.22, 0.05, 32), btnMat);
+    screwCore.rotation.x = Math.PI / 2;
+    screwCore.position.set(0, 1.38, 0.32);
+    key.add(screwCore);
+    var slot = new THREE.Mesh(new THREE.BoxGeometry(0.3, 0.05, 0.02), chromeMat);
+    slot.position.set(0, 1.38, 0.35);
+    slot.rotation.z = 0.5;
+    key.add(slot);
 
-    // status LED
-    var led = new THREE.Mesh(new THREE.SphereGeometry(0.055, 16, 16), amberMat);
-    led.position.set(0.55, -1.15, 0.42);
+    // status LED (small amber accent, like the photo's indicator dot)
+    var led = new THREE.Mesh(new THREE.SphereGeometry(0.05, 16, 16), amberMat);
+    led.position.set(0.6, 1.05, 0.4);
     key.add(led);
 
-    // slim chrome lanyard loop, half-embedded at the bottom
-    var lanyard = new THREE.Mesh(new THREE.TorusGeometry(0.22, 0.05, 12, 30), chromeMat);
-    lanyard.position.set(0, -1.98, 0);
+    // keyring loop at the top corner
+    var lanyard = new THREE.Mesh(new THREE.TorusGeometry(0.2, 0.05, 12, 30), chromeMat);
+    lanyard.position.set(-0.72, 2.0, 0);
     key.add(lanyard);
+
+    // folded-out chrome flip blade at the bottom
+    var bladeGroup = new THREE.Group();
+    var blade = new THREE.Mesh(extrude(roundedRectShape(0.36, 1.85, 0.14), 0.09, 0.02), chromeMat);
+    blade.position.y = -0.85;
+    bladeGroup.add(blade);
+    var groove = new THREE.Mesh(new THREE.BoxGeometry(0.06, 1.5, 0.02), btnMat);
+    groove.position.set(0.05, -0.8, 0.06);
+    bladeGroup.add(groove);
+    bladeGroup.position.set(0.45, -1.72, -0.02);
+    bladeGroup.rotation.z = -0.55;
+    key.add(bladeGroup);
+    // pivot cap where the blade folds out
+    var pivot = new THREE.Mesh(new THREE.CylinderGeometry(0.16, 0.16, 0.62, 24), chromeMat);
+    pivot.rotation.x = Math.PI / 2;
+    pivot.position.set(0.45, -1.72, 0);
+    key.add(pivot);
 
     key.rotation.set(0.35, -0.55, -0.12);
     scene.add(key);
