@@ -231,7 +231,7 @@ main, .footer, .nav, .marquee { position: relative; z-index: 1; }
   color: var(--amber-deep); font-family: inherit; font-style: normal;
   text-shadow: 0 0 18px var(--glow);
 }
-.nav-logo-mark { width: 1.9rem; height: 1.9rem; color: var(--amber-deep); filter: drop-shadow(0 0 8px var(--glow-soft)); }
+.nav-logo-mark { width: 2.4rem; height: 2rem; color: var(--amber-deep); filter: drop-shadow(0 0 8px var(--glow-soft)); }
 .nav-links { display: flex; gap: 1.8rem; }
 .nav-links a {
   position: relative; font-size: 0.92rem; font-weight: 500; color: var(--muted);
