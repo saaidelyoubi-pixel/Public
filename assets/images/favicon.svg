@@ -6,12 +6,11 @@
     </linearGradient>
   </defs>
   <rect width="64" height="64" rx="14" fill="url(#g)"/>
-  <g transform="translate(7,11) scale(0.21)" fill="#17150f">
-    <g transform="skewX(-12) translate(30,0)">
-      <path fill-rule="evenodd" d="M20,16 H64 L104,82 L144,16 H188 L124,122 V184 H80 V122 Z M90,100 L112,100 L112,122 L90,122 Z M126,62 L152,62 L152,88 L126,88 Z"/>
-      <rect x="158" y="30" width="28" height="28"/>
-      <rect x="190" y="0" width="24" height="24"/>
-      <rect x="168" y="92" width="21" height="21"/>
+  <g transform="translate(7,11) scale(0.205)" fill="#17150f">
+    <g transform="skewX(-8) translate(24,0)">
+      <path fill-rule="evenodd" d="M20,16 H64 L104,82 L144,16 H188 L124,122 V184 H80 V122 Z M95,92 h19 v19 h-19 Z M121,58 h20 v20 h-20 Z M150,26 h18 v18 h-18 Z"/>
+      <rect x="198" y="16" width="22" height="22"/>
+      <rect x="162" y="92" width="16" height="16"/>
     </g>
   </g>
 </svg>
